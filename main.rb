@@ -1,14 +1,14 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-# require 'rack-flash'
-require 'pry'
 require 'bundler/setup'
+require 'rack-flash'
+require 'pry'
 require './models'
 
 set :database, "sqlite3:comic.sqlite3"
 set :sessions, true
 # enable :sessions
-use Rack::Flash, sweep: true
+# use Rack::Flash, sweep: true
 
 get '/' do
 	erb :home

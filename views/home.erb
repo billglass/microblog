@@ -1,16 +1,37 @@
-<h1>
-	ZAP
-</h1>
+<div class="speech">
+	<img src="/images/Zap.png">
+</div>
 
-<form method="POST" action="/login">
-	<input type="text" name="username" placeholder="Alias" required>
-	<input type="password" name="password" placeholder="Password" required>
-	<input type="submit" value="ZAP IN!">
-</form>
+<div class="head">	
+	<h1>
+		ZAP
+	</h1>
+</div>
 
-<form method="POST" action="/sign_up">
-	<input type="text" name="[user]username" placeholder="Pick Your Alias" required>
-	<input type="password" name="[user]password" placeholder="Pick Your Password" required>
-	<input type="text" name="[user]email" placeholder="Enter Your Email" required>
-	<input type="submit" value="ZAP UP!">
-</form>
+<div class="homeForms">
+	<h2>
+		Zap In!
+	</h2>
+	
+	<form method="POST" action="/login" class="login">
+		<input type="text" name="username" placeholder="Alias" required>
+		<br>
+		<input type="password" name="password" placeholder="Password" required>
+		<br>
+		<input type="submit" value="ZAP IN!">
+	</form>
+
+	<h2>
+		Zap Up!
+	</h2>
+	
+	<form method="POST" action="/sign_up" class="signup">
+		<input type="text" name="[user]username" placeholder="Pick Your Alias" required>
+		<br>
+		<input type="password" name="[user]password" placeholder="Pick Your Password" required>
+		<br>
+		<input type="text" name="[user]email" placeholder="Enter Your Email" required>
+		<br>
+		<input type="submit" value="ZAP UP!">
+	</form>
+</div>
