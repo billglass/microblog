@@ -20,6 +20,7 @@ post '/login' do
 			redirect to ('/feed')
 		else flash[:alert] = "Incorrect username/password"
 			redirect to ('/')
+		end
 end
 
 post '/sign_up' do
