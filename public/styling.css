@@ -1,0 +1,22 @@
+h1 {
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #FFFF00;
+	padding: 10px;
+	text-align: center;
+	font-size: 100px;
+}
+
+.homeForms {
+	padding: 10px;
+	max-width: 332px;
+	width: 332px;
+	margin: 30px auto 0 auto;
+}
+.homeForms form{
+	float: left;
+}
+
+.homeForms input {
+	margin: 5px;
+}

@@ -59,7 +59,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   pry
-  rack-flash3
+  rack-flash3 (= 1.0.5)
   rake
   sinatra
   sinatra-activerecord
