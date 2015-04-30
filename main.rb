@@ -3,6 +3,7 @@ require 'sinatra/activerecord'
 require 'rack-flash'
 require 'pry'
 require 'bundler/setup'
+require './models'
 
 set :database, "sqlite3:comic.sqlite3"
 set :sessions, true
