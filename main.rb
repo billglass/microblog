@@ -1,13 +1,13 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+# require 'rack-flash'
 require 'bundler/setup'
 require 'rack-flash'
 require './models'
 
 set :database, "sqlite3:comic.sqlite3"
 set :sessions, true
-# enable :sessions
-use Rack::Flash, sweep: true
+# use Rack::Flash, sweep: true
 
 def current_user
 	session[:user_id] ? User.find(session[:user_id]) : nil
@@ -29,7 +29,7 @@ post '/login' do
 end
 
 post '/sign_up' do
-	# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
+		# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
 	@new_user = User.create(params[:user])
 	session[:user_id] = @new_user.id
 	puts "#{params.inspect}"
