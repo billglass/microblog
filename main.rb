@@ -49,7 +49,8 @@ post '/login' do
 			flash[:notice] = "Welcome Back #{current_user.username}"
 			redirect to ('/feed')
 			puts "#{params.inspect}"
-		else flash[:alert] = "Incorrect username/password"
+		else 
+			flash[:alert] = "Incorrect username/password"
 			redirect to ('/')
 		end
 end
