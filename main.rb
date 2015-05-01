@@ -41,7 +41,7 @@ get '/account' do
 end
 
 post '/account' do
-	
+
 end
 
 get '/feed' do
@@ -49,7 +49,7 @@ get '/feed' do
 end
 
 post '/feed' do
-	#somthing
+
 end
 
 get '/profile' do
