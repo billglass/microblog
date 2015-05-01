@@ -1,15 +1,29 @@
-<h1>
-	<%= "Welcome #{current_user.username}" %>
-</h1>
+<div class="feedHead">
+	<h1>
+		<%= "Welcome #{current_user.username}" %>
+	</h1>
+</div>
 
-<form action="/feed" method="POST">
-	<input type="text" name="[user]feed" maxlength="150"><br>
-	<input type="submit" value="ZAP it">
-</form>
+<div class="feedForm"
+	<form action="/feed" method="POST">
+		<div class="feedText">
+			<input type="text" name="[post]feed" maxlength="150">
+		</div>
+		<div class="feedSubmit">
+			<input type="submit" value="ZAP it">
+		</div>
+	</form>
+</div>
 
-<form action="/logout" method="POST">
-	<input type="submit" value="Zap Out">
-</form>
+<% @post.each do |key, value| %>
+<p>
+
+
+<div class="logout">
+	<form action="/logout" method="POST">
+		<input type="submit" value="Zap Out">
+	</form>
+</div>
 
 <ul>
 	<li>

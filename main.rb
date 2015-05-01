@@ -7,13 +7,17 @@ require './models'
 
 set :database, "sqlite3:comic.sqlite3"
 set :sessions, true
-# use Rack::Flash, sweep: true
+use Rack::Flash, sweep: true
 
 def current_user
 	session[:user_id] ? User.find(session[:user_id]) : nil
 end	
 
+navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile"}
+
 get '/' do
+	@title = "Zap!"
+	@nav = navigation
 	erb :home
 end
 
@@ -28,6 +32,7 @@ post '/login' do
 		end
 end
 
+
 post '/sign_up' do
 		# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
 	@new_user = User.create(params[:user])
@@ -37,6 +42,8 @@ post '/sign_up' do
 end
 
 get '/account' do
+	@title = navigation.keys[1]
+	@nav = navigation
 	erb :account
 end
 
@@ -45,6 +52,9 @@ post '/account' do
 end
 
 get '/feed' do
+	@title = navigation.keys[0]
+	@nav = navigation
+	@post =
 	erb :feed
 end
 
@@ -53,6 +63,8 @@ post '/feed' do
 end
 
 get '/profile' do
+	@title = navigation.keys[2]
+	@nav = navigation
 	erb :profile
 end
 
