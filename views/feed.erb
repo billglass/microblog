@@ -1,6 +1,8 @@
-<h1>
-	<%= "Welcome #{current_user.username}" %>
-</h1>
+<div class="feedHead">
+	<h1>
+		<%= "Welcome #{current_user.username}" %>
+	</h1>
+</div>
 
 <form action="/feed" method="POST">
 	<input type="text" name="[post]post" maxlength="150"><br>
@@ -11,16 +13,3 @@
 <% current_user.posts.each do |tweet| %>
 		<p><%= tweet.post %></p>
 <% end %>  
-		
-
-<form action="/logout" method="POST">
-	<input type="submit" value="Zap Out">
-</form>
-
-<ul>
-	<li>
-		
-	</li>
-
-
-</ul>

@@ -7,6 +7,8 @@ body {
 	background-size: 350px;
 }
 
+/* Layout - Banner across pages >>>>>>>>> Start*/
+
 .speech {
 	position: absolute;
 	top: 12px;
@@ -33,6 +35,39 @@ body {
 	font-size: 100px;
 	z-index: -1
 }
+/* Layout - Banner across pages >>>>>>>> End */
+
+/* Layout - Banner across pages >>>>>>>> End */
+footer {
+	position: absolute;
+	background: #000000;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.footerUL {
+	float: left;
+}
+
+.footerUL ul {
+	list-style-type: none;
+	margin: 10px;
+	padding: 0;
+}
+
+.footerUL a {
+	color: #EDEF34;
+	text-decoration: none;
+}
+
+.footerLogout {
+	float: left;
+}
+/* Layout - Banner across pages >>>>>>>> End */
+
+/* Home - Sign-in & Sign-up forms >>>> Start */
 
 .head h1 {
 	font-size: 165px;
@@ -52,7 +87,6 @@ body {
 	z-index: -10;
 	box-shadow: 0px 8px 28px 0px;
 }
-
 
 .login {
 	float: left;
@@ -149,3 +183,66 @@ input.submit {
 	width: 226px;
 	margin: 2px auto;	
 }
+/* Home - Sign-in & Sign-up forms >>>> Start */
+
+/* Account >>>>>>>>>>>>>>>>>>>>>>>>>>> Start */
+.account {
+	width: 413px;
+	text-align: center;
+	border: 2px solid black;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+
+.account h3 {
+	border: 2px solid black;
+	margin: 2px;
+	background-color: #FFFFFF;
+}
+
+.accHead {
+	width: 100%;
+	text-align: center;
+	margin-top: 90px;
+	font-size: 40px;
+}
+
+.accHead h1 {
+	color: #DB0001;
+}
+
+.formLeft {
+	float: left;
+}
+
+.formRight {
+	float: left;
+}
+
+.account input[type="text"]{
+	font-size: 1em;
+	margin: 10px 2px;
+}
+
+/* Account >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End*/
+
+
+
+/* Feed >>>>>>>>>>>>>>>>>>>>>>> Start */
+
+.feedForm {
+
+}
+
+.logout {
+
+}
+/* Feed >>>>>>>>>>>>>>>>>>>>>>>>> End */
+
+
+
+/* Profile >>>>>>>>>>>>>>>>>>>> Start */
+
+
+
+/* Profile >>>>>>>>>>>>>>>>>>>>>> End */

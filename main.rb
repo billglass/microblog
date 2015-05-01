@@ -13,6 +13,8 @@ def current_user
 	session[:user_id] ? User.find(session[:user_id]) : nil
 end	
 
+navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile"}
+
 #mapping a PATTERN, not an exact URL
 #: = key
 # get '/follow/:id' do
@@ -39,6 +41,8 @@ end
 # end
 
 get '/' do
+	@title = "Zap!"
+	@nav = navigation
 	erb :home
 end
 
@@ -54,6 +58,7 @@ post '/login' do
 		end
 end
 
+
 post '/sign_up' do
 		# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
 	@new_user = User.create(params[:user])
@@ -63,6 +68,8 @@ post '/sign_up' do
 end
 
 get '/account' do
+	@title = navigation.keys[1]
+	@nav = navigation
 	erb :account
 end
 
@@ -73,6 +80,8 @@ end
 #method called "posts"
 
 get '/feed' do
+	@title = navigation.keys[0]
+	@nav = navigation
 	# @post = Post.find_by(post: params[:post])
 	erb :feed
 end
@@ -87,6 +96,8 @@ post '/feed' do
 end
 
 get '/profile' do
+	@title = navigation.keys[2]
+	@nav = navigation
 	erb :profile
 end
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>
-			ZAP!
+			<%= @title %>
 		</title>
 
 		<meta charset="UTF-8">
@@ -21,9 +21,47 @@
 		<div class="speech">
 			<img src="/images/spike3.png">
 		</div>
-
+		
 		<%= yield %>
-	
+
+		<% if current_user %>
+			<nav>
+				<ul>
+				<% @nav.each do |key, value| %>
+					<li>
+						<a href=<%= value %>>
+							<%= key %>
+						</a>
+					</li>
+					<% end %>
+				</ul>
+			</nav>
+
+			<form action="/logout" method="POST">
+				<input type="submit" value="ZAP OUT">
+			</form>
+
+			<footer>
+				<div class="footerUL">
+					<ul>
+					<% @nav.each do |key, value| %>
+						<li>
+							<a href=<%= value %>>
+								<%= key %>
+							</a>
+						</li>
+					<% end %>
+					</ul>
+				</div>
+
+				<div class="footerLogout">
+						<form action="/logout" method="POST">
+							<input type="submit" value="ZAP OUT">
+						</form>
+					</div>
+			</footer>
+		<% end %>
+
 	</body>
 </html>
 
