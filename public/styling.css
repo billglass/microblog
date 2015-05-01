@@ -1,22 +1,151 @@
-h1 {
-	max-width: 960px;
-	margin: 0 auto;
-	background-color: #FFFF00;
-	padding: 10px;
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Bangers', cursive;
+	background-image: url('/images/polka.jpg');
+	background-repeat: repeat;
+	background-size: 350px;
+}
+
+.speech {
+	position: absolute;
+	top: 12px;
+	width: 97%;
+	margin: 0 0 0 38px;
+	text-align: center;
+	/*height: 951px;*/
+	z-index: -5;
+}
+
+.speech img {
+	width: 478px;
+	height: 215px;
+	z-index: -4;
+	margin: 0 auto ;
+}
+
+.head {
+	/*max-width: 960px;*/
+	margin: 20px auto;
+	/*background-color: #FFFF00;*/
+	padding-top: 10px;
 	text-align: center;
 	font-size: 100px;
+	z-index: -1
+}
+
+.head h1 {
+	font-size: 165px;
+	margin: 0	 auto;
+	padding: 0;
 }
 
 .homeForms {
-	padding: 10px;
-	max-width: 332px;
-	width: 332px;
-	margin: 30px auto 0 auto;
+	padding: 2px;
+	max-width: 468px;
+	width: 468px;
+	margin: 0 auto;
+	border: 2px solid black;
+	height: 288px;
+	background-color: #FFFFFF;
+	text-align: center;
+	z-index: -10;
+	box-shadow: 0px 8px 28px 0px;
 }
-.homeForms form{
+
+
+.login {
 	float: left;
+	background-color: #FFFFFF;
+	padding: 2px; 
+}
+
+.zapHead {
+	/*float: left;*/
+	border: 2px solid black;
+	background-color: #EDEF34;
+	padding: 1px;
+	margin: 2px auto;
+}
+
+.homeForms h2 {
+	/*width: 92px;*/
+	display: inline-block;
+	font-size: 4em;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.inFull {
+	/*border: 2px solid black;*/
+	background-color: #FFFFFF;
+	width: 230px;
+	float: left;
+	height:	200px;
+	margin: 2px 0;
+}
+
+.logForm {
+	border: 2px solid black;
+	background: #FFFFFF;
+	margin: 0;
+	height: 140px;
 }
 
 .homeForms input {
-	margin: 5px;
+	margin: 10px auto;
+	font-size: 1em;
+}
+
+.logSubmit {
+	border: 2px solid black;
+	background-color: #FFFFFF;
+	width: 226px;
+	margin: 2px 0;
+}
+
+input.submit {
+	font-size: 3em;
+	background-color: #E12422;
+	font-family: 'Bangers', cursive;
+	width: 100%;
+	margin: 0;
+	border: 0;
+}
+
+.signUp {
+	height: 266px;
+	float: left;
+	padding: 2px;
+}
+
+.zapUp {
+	/*float: left;*/
+	border: 2px solid	black;
+	background-color: #FFFFFF;
+	padding: 1px;
+	margin: 2px auto;
+}
+
+.upFull {
+	/*border: 2px solid black;*/
+	background-color: #FFFFFF;
+	width: 230px;
+	float: left;
+	height:	152px;
+	margin: 0;	
+}
+
+.signForm {
+	border: 2px solid black;
+	background: #FFFFFF;
+	margin: 2px auto;	
+	height: 140px;
+}
+
+.signSubmit {
+	border: 2px solid black;
+	background-color: #0000FF;
+	width: 226px;
+	margin: 2px auto;	
 }

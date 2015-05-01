@@ -7,7 +7,6 @@ require './models'
 
 set :database, "sqlite3:comic.sqlite3"
 set :sessions, true
-# enable :sessions
 # use Rack::Flash, sweep: true
 
 def current_user
