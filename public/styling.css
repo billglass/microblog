@@ -1,3 +1,5 @@
+/*i hate tomatoes for perspective thingy*/
+
 body {
 	padding: 0;
 	margin: 0;
@@ -5,6 +7,82 @@ body {
 	background-image: url('/images/polka.jpg');
 	background-repeat: repeat;
 	background-size: 350px;
+}
+
+.mainHead {
+	width: 100%;
+	text-align: center;
+	margin: 75px auto;
+	font-size: 40px;
+}
+
+.mainHead h1 {
+	color: #DB0001;
+	text-shadow: -6px 6px 20px #000000;
+}
+
+.weird {
+	width: 786px;
+	margin: 0 auto;
+	height: 298px;
+}
+
+.navBar {
+	float: left;
+	z-index: -1;
+	background-image: url("/images/speech2.png");
+	background-repeat: no-repeat;
+	background-size: 180px 265px;
+	background-position: center;
+	padding: 28px;
+	margin: 0 auto;
+	width: 120px;
+	height: 209px;
+}
+
+.navBar nav {
+	text-align: center;
+}
+
+.navBar ul {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+	
+.navBar li {
+	margin: 0;
+	padding: 0;
+}
+
+.navBar a {
+	text-decoration: none;
+	color: #DB0001;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+.navBar input {
+	border: none;
+	font-family: 'Bangers', cursive;
+	font-size: 2em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+}
+
+
+
+/*.navBar img {
+	z-index: -5;
+	position: relative;
+	top: 0;
+	left: 0;
+}*/
+
+
+.navBar input[type="submit"] {
+
 }
 
 /* Layout - Banner across pages >>>>>>>>> Start*/
@@ -192,6 +270,7 @@ input.submit {
 	border: 2px solid black;
 	margin: 0 auto;
 	background-color: #FFFFFF;
+	box-shadow:  0px 8px 28px 0px;
 }
 
 .account h3 {
@@ -200,16 +279,6 @@ input.submit {
 	background-color: #FFFFFF;
 }
 
-.accHead {
-	width: 100%;
-	text-align: center;
-	margin-top: 90px;
-	font-size: 40px;
-}
-
-.accHead h1 {
-	color: #DB0001;
-}
 
 .formLeft {
 	float: left;
