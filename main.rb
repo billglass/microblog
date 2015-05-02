@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-# require 'rack-flash'
 require 'bundler/setup'
 require 'rack-flash'
 require './models'
@@ -12,6 +11,8 @@ use Rack::Flash, sweep: true
 def current_user
 	session[:user_id] ? User.find(session[:user_id]) : nil
 end	
+
+navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile"}
 
 #mapping a PATTERN, not an exact URL
 #: = key
@@ -39,6 +40,8 @@ end
 # end
 
 get '/' do
+	@title = "Zap!"
+	@nav = navigation
 	erb :home
 end
 
@@ -55,6 +58,7 @@ post '/login' do
 		end
 end
 
+
 post '/sign_up' do
 		# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
 	@new_user = User.create(params[:user])
@@ -64,6 +68,8 @@ post '/sign_up' do
 end
 
 get '/account' do
+	@title = navigation.keys[1]
+	@nav = navigation
 	erb :account
 end
 
@@ -71,11 +77,14 @@ post '/account' do
 	@user = User.create(user: params[:user][:fname])
 	puts "#{params.inspect}"
 	redirect to ('/account')
+ redirect to('/account')
 end
 
 #method called "posts"
 
 get '/feed' do
+	@title = navigation.keys[0]
+	@nav = navigation
 	# @post = Post.find_by(post: params[:post])
 	erb :feed
 end
@@ -83,13 +92,15 @@ end
 post '/feed' do
 	@post = Post.new(post: params[:post][:post])
 	# @post = Post.new(params[:post])   #, user_id: current_user.id)
-	@post.user = current_user
+	# @post.user = current_user
 	@post.save
 	puts "#{params.inspect}"
 	redirect to ('/feed')
 end
 
 get '/profile' do
+	@title = navigation.keys[2]
+	@nav = navigation
 	erb :profile
 end
 

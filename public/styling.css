@@ -1,3 +1,5 @@
+/*i hate tomatoes for perspective thingy*/
+
 body {
 	padding: 0;
 	margin: 0;
@@ -6,6 +8,84 @@ body {
 	background-repeat: repeat;
 	background-size: 350px;
 }
+
+.mainHead {
+	width: 100%;
+	text-align: center;
+	margin: 75px auto;
+	font-size: 40px;
+}
+
+.mainHead h1 {
+	color: #DB0001;
+	text-shadow: -6px 6px 20px #000000;
+}
+
+.weird {
+	width: 1340px;
+	margin: 0 auto 140px auto;
+	height: 408px;
+}
+
+.navBar {
+	float: left;
+	z-index: -1;
+	background-image: url("/images/speech2.png");
+	background-repeat: no-repeat;
+	background-size: 180px 265px;
+	background-position: center;
+	padding: 28px;
+	margin: 0 auto;
+	width: 120px;
+	height: 209px;
+}
+
+.navBar nav {
+	text-align: center;
+}
+
+.navBar ul {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+	
+.navBar li {
+	margin: 0;
+	padding: 0;
+}
+
+.navBar a {
+	text-decoration: none;
+	color: #DB0001;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+.navBar input {
+	border: none;
+	font-family: 'Bangers', cursive;
+	font-size: 2em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+}
+
+
+
+/*.navBar img {
+	z-index: -5;
+	position: relative;
+	top: 0;
+	left: 0;
+}*/
+
+
+.navBar input[type="submit"] {
+
+}
+
+/* Layout - Banner across pages >>>>>>>>> Start*/
 
 .speech {
 	position: absolute;
@@ -33,6 +113,68 @@ body {
 	font-size: 100px;
 	z-index: -1
 }
+/* Layout - Banner across pages >>>>>>>> End */
+
+/* Layout - Banner across pages >>>>>>>> End */
+footer {
+	position: fixed;
+	background: #000000;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%
+}
+
+.footAll {
+	width: 180px;
+	margin: 0 auto;
+	height: 180px;
+}
+
+.footerUL {
+	float: left;
+	margin: 10px auto;
+	/*width: 100%;*/
+	font-size: 2em;
+}
+
+.footerUL ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footerUL a {
+	color: #EDEF34;
+	text-decoration: none;
+}
+
+.footLog {
+	border: none;
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  background-color: #000000;
+  color: #EDEF34;
+}
+
+.icon {
+	/*float: left;*/
+	width: 44px;
+	height: auto;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+/*.icons img {
+	float: left;
+	width: 20px;
+	height:auto;
+
+}*/
+/* Layout - Banner across pages >>>>>>>> End */
+
+/* Home - Sign-in & Sign-up forms >>>> Start */
 
 .head h1 {
 	font-size: 165px;
@@ -52,7 +194,6 @@ body {
 	z-index: -10;
 	box-shadow: 0px 8px 28px 0px;
 }
-
 
 .login {
 	float: left;
@@ -149,3 +290,84 @@ input.submit {
 	width: 226px;
 	margin: 2px auto;	
 }
+/* Home - Sign-in & Sign-up forms >>>> Start */
+
+/* Account >>>>>>>>>>>>>>>>>>>>>>>>>>> Start */
+.account {
+	width: 960px;
+	text-align: center;
+	border: 2px solid black;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	box-shadow:  0px 8px 28px 0px;
+	height: 328px;
+}
+
+.account h3 {
+	border: 2px solid black;
+	margin: 2px;
+	background-color: #FFFFFF;
+	font-size: 3em;
+}
+
+
+.formLeft {
+	float: left;
+	width: 476px;
+	border: 2px solid black;
+	margin: 0 2px 2px 2px;
+}
+
+.formRight {
+	float: left;
+	border: 2px solid black;
+	margin: 0 0 2px 0;
+}
+
+.account input[type="text"]{
+	font-size: 1em;
+	margin: 10px 10px;
+	width: 443px
+}
+
+.accSubmit {
+	border: 2px solid black;
+	font-family: 'Bangers', cursive;
+	font-size: 4em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+	margin: 0 2px 36px 2px;
+	padding: 6px 397px; 
+}
+
+.delAcc {
+	border: 2px solid black;
+	font-family: 'Bangers', cursive;
+	font-size: 2em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+	box-shadow: 0px 8px 28px 0px #000000;
+}
+
+/* Account >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End*/
+
+
+
+/* Feed >>>>>>>>>>>>>>>>>>>>>>> Start */
+
+.feedForm {
+
+}
+
+.logout {
+
+}
+/* Feed >>>>>>>>>>>>>>>>>>>>>>>>> End */
+
+
+
+/* Profile >>>>>>>>>>>>>>>>>>>> Start */
+
+
+
+/* Profile >>>>>>>>>>>>>>>>>>>>>> End */
