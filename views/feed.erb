@@ -5,11 +5,16 @@
 </div>
 
 <form action="/feed" method="POST">
-	<input type="text" name="[post]post" maxlength="150"><br>
+	<input type="text" name="[post]post" maxlength="150">
+	
+	<br>
+	
 	<input type="submit" value="ZAP it">
 </form>
 
 
 <% current_user.posts.each do |tweet| %>
-		<p><%= tweet.post %></p>
+		<p>
+			<%= tweet.post %>
+		</p>
 <% end %>  
