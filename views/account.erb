@@ -18,6 +18,10 @@
 	<input type="submit" value="Submit"><br>
 </form>
 
+	<% users.each do |t| %>
+		<p><%= t.fname %></p>
+	<% end %>  
+
 
 <form action="/account" method="POST">
 	<input type="submit" value="Delete?">

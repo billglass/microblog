@@ -68,7 +68,9 @@ get '/account' do
 end
 
 post '/account' do
-
+	@user = User.create(user: params[:user][:fname])
+	puts "#{params.inspect}"
+	redirect to ('/account')
 end
 
 #method called "posts"
