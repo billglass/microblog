@@ -333,11 +333,11 @@ input.submit {
 .accSubmit {
 	border: 2px solid black;
 	font-family: 'Bangers', cursive;
-	font-size: 2em;
+	font-size: 4em;
 	background-color: #FFFFFF;
 	color: #DB0001;
 	margin: 0 2px 36px 2px;
-	padding: 23px 436px; 
+	padding: 6px 397px; 
 }
 
 .delAcc {
