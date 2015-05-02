@@ -55,23 +55,32 @@
 		
 		<% if current_user %>
 			<footer>
-				<div class="footerUL">
-					<ul>
-					<% @nav.each do |key, value| %>
-						<li>
-							<a href=<%= value %>>
-								<%= key %>
-							</a>
-						</li>
-					<% end %>
-					</ul>
-				</div>
-
-				<div class="footerLogout">
+				<div class="footAll">
+					<div class="footerUL">
+						<ul>
+						<% @nav.each do |key, value| %>
+							<li>
+								<a href=<%= value %>>
+									<%= key %>
+								</a>
+							</li>
+						<% end %>
+						</ul>
+					
 						<form action="/logout" method="POST">
-							<input type="submit" value="ZAP OUT">
+							<input type="submit" value="ZAP OUT" class="footLog">
 						</form>
+					
 					</div>
+
+					<!-- <div class="icons"> -->
+						<img src="/images/icons/facebooklogo.png" class="icon">
+						
+						<img src="/images/icons/instalogo.jpg" class="icon">
+						
+						<img src="/images/icons/twitterlogo.png" class="icon">
+					<!-- </div> -->
+				</div>
 			</footer>
 		<% end %>
 	</body>

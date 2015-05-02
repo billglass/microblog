@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-# require 'rack-flash'
 require 'bundler/setup'
 require 'rack-flash'
 require './models'
@@ -74,7 +73,7 @@ get '/account' do
 end
 
 post '/account' do
-
+ redirect to('/account')
 end
 
 #method called "posts"
@@ -89,7 +88,7 @@ end
 post '/feed' do
 	@post = Post.new(post: params[:post][:post])
 	# @post = Post.new(params[:post])   #, user_id: current_user.id)
-	@post.user = current_user
+	# @post.user = current_user
 	@post.save
 	puts "#{params.inspect}"
 	redirect to ('/feed')

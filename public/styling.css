@@ -22,9 +22,9 @@ body {
 }
 
 .weird {
-	width: 786px;
-	margin: 0 auto;
-	height: 298px;
+	width: 1340px;
+	margin: 0 auto 140px auto;
+	height: 408px;
 }
 
 .navBar {
@@ -117,21 +117,31 @@ body {
 
 /* Layout - Banner across pages >>>>>>>> End */
 footer {
-	position: absolute;
+	position: fixed;
 	background: #000000;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	text-align: center;
+	width: 100%
+}
+
+.footAll {
+	width: 180px;
+	margin: 0 auto;
+	height: 180px;
 }
 
 .footerUL {
 	float: left;
+	margin: 10px auto;
+	/*width: 100%;*/
+	font-size: 2em;
 }
 
 .footerUL ul {
 	list-style-type: none;
-	margin: 10px;
+	margin: 0;
 	padding: 0;
 }
 
@@ -140,9 +150,28 @@ footer {
 	text-decoration: none;
 }
 
-.footerLogout {
-	float: left;
+.footLog {
+	border: none;
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  background-color: #000000;
+  color: #EDEF34;
 }
+
+.icon {
+	/*float: left;*/
+	width: 44px;
+	height: auto;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+/*.icons img {
+	float: left;
+	width: 20px;
+	height:auto;
+
+}*/
 /* Layout - Banner across pages >>>>>>>> End */
 
 /* Home - Sign-in & Sign-up forms >>>> Start */
@@ -265,32 +294,59 @@ input.submit {
 
 /* Account >>>>>>>>>>>>>>>>>>>>>>>>>>> Start */
 .account {
-	width: 413px;
+	width: 960px;
 	text-align: center;
 	border: 2px solid black;
 	margin: 0 auto;
 	background-color: #FFFFFF;
 	box-shadow:  0px 8px 28px 0px;
+	height: 328px;
 }
 
 .account h3 {
 	border: 2px solid black;
 	margin: 2px;
 	background-color: #FFFFFF;
+	font-size: 3em;
 }
 
 
 .formLeft {
 	float: left;
+	width: 476px;
+	border: 2px solid black;
+	margin: 0 2px 2px 2px;
 }
 
 .formRight {
 	float: left;
+	border: 2px solid black;
+	margin: 0 0 2px 0;
 }
 
 .account input[type="text"]{
 	font-size: 1em;
-	margin: 10px 2px;
+	margin: 10px 10px;
+	width: 443px
+}
+
+.accSubmit {
+	border: 2px solid black;
+	font-family: 'Bangers', cursive;
+	font-size: 2em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+	margin: 0 2px 36px 2px;
+	padding: 23px 436px; 
+}
+
+.delAcc {
+	border: 2px solid black;
+	font-family: 'Bangers', cursive;
+	font-size: 2em;
+	background-color: #FFFFFF;
+	color: #DB0001;
+	box-shadow: 0px 8px 28px 0px #000000;
 }
 
 /* Account >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End*/
