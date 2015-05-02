@@ -22,25 +22,38 @@
 			<img src="/images/spike3.png">
 		</div>
 		
-		<%= yield %>
 
 		<% if current_user %>
-			<nav>
-				<ul>
-				<% @nav.each do |key, value| %>
-					<li>
-						<a href=<%= value %>>
-							<%= key %>
-						</a>
-					</li>
-					<% end %>
-				</ul>
-			</nav>
+				<div class="mainHead">
+					<h1>
+						<%= "Welcome #{current_user.username}" %>
+					</h1>
+				</div>
 
-			<form action="/logout" method="POST">
-				<input type="submit" value="ZAP OUT">
-			</form>
-
+				<div class="weird">
+				<div class="navBar">
+					<nav>
+						<ul>
+						<% @nav.each do |key, value| %>
+							<li>
+								<a href=<%= value %>>
+									<%= key %>
+								</a>
+							</li>
+							<% end %>
+						</ul>
+						
+						<form action="/logout" method="POST">
+							<input type="submit" value="ZAP OUT" class="logout">
+						</form>
+					</nav>
+				</div>
+			<% end %>
+			
+			<%= yield %>
+		</div>
+		
+		<% if current_user %>
 			<footer>
 				<div class="footerUL">
 					<ul>
@@ -61,7 +74,6 @@
 					</div>
 			</footer>
 		<% end %>
-
 	</body>
 </html>
 
