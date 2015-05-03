@@ -18,8 +18,10 @@
 	<input type="submit" value="Submit"><br>
 </form>
 
-	<% users.each do |t| %>
-		<p><%= t.fname %></p>
+	<% @user.each do |t| %>
+		<p>
+			<%= t.fname %>
+		</p>
 	<% end %>  
 
 
