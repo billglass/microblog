@@ -68,13 +68,14 @@ post '/sign_up' do
 end
 
 get '/account' do
+	# @users = User.all
 	@title = navigation.keys[1]
 	@nav = navigation
 	erb :account
 end
 
 post '/account' do
-	@user = User.create(user: params[:user][:fname])
+	@users = User.all
 	puts "#{params.inspect}"
 	redirect to ('/account')
  redirect to('/account')
