@@ -12,9 +12,10 @@
 	<input type="submit" value="ZAP it">
 </form>
 
-
-<% current_user.posts.each do |tweet| %>
-		<p>
-			<%= tweet.post %>
-		</p>
-<% end %>  
+<% if current_user.posts.all != nil %>
+	<% current_user.posts.each do |tweet| %>
+			<p>
+				<%= tweet.post %>
+			</p>
+	<% end %> 
+<% end %> 

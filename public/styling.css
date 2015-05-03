@@ -180,6 +180,8 @@ footer {
 	font-size: 165px;
 	margin: 0	 auto;
 	padding: 0;
+	color: #DB0001;
+  text-shadow: -6px 6px 20px #000000
 }
 
 .homeForms {
@@ -215,6 +217,7 @@ footer {
 	font-size: 4em;
 	margin: 0 auto;
 	padding: 0;
+	color: #E12422;
 }
 
 .inFull {
@@ -252,6 +255,7 @@ input.submit {
 	width: 100%;
 	margin: 0;
 	border: 0;
+	color: #EDEF34;
 }
 
 .signUp {
@@ -308,6 +312,7 @@ input.submit {
 	margin: 2px;
 	background-color: #FFFFFF;
 	font-size: 3em;
+	background-color: #EDEF34;
 }
 
 
@@ -337,7 +342,8 @@ input.submit {
 	background-color: #FFFFFF;
 	color: #DB0001;
 	margin: 0 2px 36px 2px;
-	padding: 6px 397px; 
+	padding: 6px 397px;
+	background-color: #DB0001;
 }
 
 .delAcc {
