@@ -52,14 +52,15 @@ post '/login' do
 			flash[:notice] = "Welcome Back #{current_user.username}"
 			redirect to ('/feed')
 			puts "#{params.inspect}"
-		else flash[:alert] = "Incorrect username/password"
+		else 
+			flash[:alert] = "Incorrect username/password"
 			redirect to ('/')
 		end
 end
 
 
 post '/sign_up' do
-		# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
+	# Usernames are unique - loop through usernames, if @new_user is taken already, flash :alert?
 	@new_user = User.create(params[:user])
 	session[:user_id] = @new_user.id
 	puts "#{params.inspect}"
@@ -67,13 +68,17 @@ post '/sign_up' do
 end
 
 get '/account' do
+	@user = User.all
 	@title = navigation.keys[1]
 	@nav = navigation
 	erb :account
 end
 
 post '/account' do
- redirect to('/account')
+	@user = User.update(current_user, params[:user])
+	@user.save
+	puts "#{params.inspect}"
+	redirect to ('/account')
 end
 
 #method called "posts"
@@ -88,7 +93,7 @@ end
 post '/feed' do
 	@post = Post.new(post: params[:post][:post])
 	# @post = Post.new(params[:post])   #, user_id: current_user.id)
-	# @post.user = current_user
+	@post.user = current_user
 	@post.save
 	puts "#{params.inspect}"
 	redirect to ('/feed')
