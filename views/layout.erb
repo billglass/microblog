@@ -21,37 +21,58 @@
 		<div class="speech">
 			<img src="/images/spike3.png">
 		</div>
-		
-
-		<% if current_user %>
+			
+		<% if current_user %>	
+			<% if @title == "Account" %>
 				<div class="mainHead">
 					<h1>
 						<%= "Welcome #{current_user.username}" %>
 					</h1>
 				</div>
-
-				<div class="weird">
-				<div class="navBar">
-					<nav>
-						<ul>
-						<% @nav.each do |key, value| %>
-							<li>
-								<a href=<%= value %>>
-									<%= key %>
-								</a>
-							</li>
-							<% end %>
-						</ul>
-						
-						<form action="/logout" method="POST">
-							<input type="submit" value="ZAP OUT" class="logout">
-						</form>
-					</nav>
+			<% elsif @title == "Feed" %>
+				<div class="mainHead">
+					<h1>
+						<%= "Planet Bugle" %>
+					</h1>
 				</div>
+			<% elsif @title == "Profile" %>
+				<div class="mainHead">
+					<h1>
+						<%= "#{current_user.username}'s Profile" %>
+					</h1>
+				</div>
+			<% else %>
+					<%= yield %>				
 			<% end %>
-			
+
+			<div class="weird">
+				<% if @title != "Zap!" %>
+					<div class="navBar">
+						<nav>
+							<ul>
+							<% @nav.each do |key, value| %>
+								<li>
+									<a href=<%= value %>>
+										<%= key %>
+									</a>
+								</li>
+								<% end %>
+							</ul>
+							
+							<form action="/logout" method="POST">
+								<input type="submit" value="ZAP OUT" class="logout">
+							</form>
+						</nav>
+					</div>
+
+					<%= yield %>
+				<% end %>
+				
+			</div>
+
+		<% else %>
 			<%= yield %>
-		</div>
+		<% end %>
 		
 		<% if current_user %>
 			<footer>
