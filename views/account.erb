@@ -18,11 +18,32 @@
 	<input type="submit" value="Submit"><br>
 </form>
 
-	<% @user.each do |t| %>
-		<p>
-			<%= t.fname %>
+<% @user.each do |t| %>
+	<p>
+	 		<%= t.fname %>
+			<%= t.lname %>
 		</p>
-	<% end %>  
+		<p>			
+			<%= t.phone %>
+		</p>
+		<p>
+			<%= t.city %>
+		</p>
+		<p>
+			<%= t.gender %>
+		</p>
+		<p>
+			<%= t.birthday %>
+		</p>
+		<p>
+			<%= t.website %>
+		</p>
+		<p>
+			<%= t.superhero %> 
+		</p> 
+
+
+	<% end %> 
 
 
 <form action="/account" method="POST">
@@ -31,7 +52,7 @@
 
 <form action="/logout" method="POST">
 	<input type="submit" value="Zap Out">
-</form>
+</form> 
 
 <div class="account">
 	<h3>
@@ -76,8 +97,7 @@
 		<br>
 	</form>
 
-
 	<form action="/account" method="POST">
 		<input type="submit" value="Delete?" class="delAcc">
 	</form>
-</div>
+</div> 

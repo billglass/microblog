@@ -75,8 +75,7 @@ get '/account' do
 end
 
 post '/account' do
-	@user = User.all
-	@user = User.update(user: params[:user])
+	@user = User.update(current_user, params[:user])
 	@user.save
 	puts "#{params.inspect}"
 	redirect to ('/account')
