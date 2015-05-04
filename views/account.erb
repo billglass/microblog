@@ -1,4 +1,58 @@
+<h1>
+	<%= "Welcome #{current_user.username}" %>
+</h1>
 
+<h3>
+	Account Details
+</h3>
+
+<form action="/account" method="POST">
+	<input type="text" name="[user]fname" placeholder="First Name"><br>
+	<input type="text" name="[user]lname" placeholder="Last Name"><br>
+	<input type="text" name="[user]phone" placeholder="Phone Number"><br>
+	<input type="text" name="[user]city" placeholder="City"><br>
+	<input type="text" name="[user]gender" placeholder="Gender"><br>
+	<input type="text" name="[user]birthday" placeholder="Birthday ddmmyyyy"><br>
+	<input type="text" name="[user]website" placeholder="Website"><br>
+	<input type="text" name="[user]superhero" placeholder="Favorite Superhero or Villain"><br>
+	<input type="submit" value="Submit"><br>
+</form>
+
+<% @user.each do |t| %>
+	<p>
+	 		<%= t.fname %>
+			<%= t.lname %>
+		</p>
+		<p>			
+			<%= t.phone %>
+		</p>
+		<p>
+			<%= t.city %>
+		</p>
+		<p>
+			<%= t.gender %>
+		</p>
+		<p>
+			<%= t.birthday %>
+		</p>
+		<p>
+			<%= t.website %>
+		</p>
+		<p>
+			<%= t.superhero %> 
+		</p> 
+
+
+	<% end %> 
+
+
+<form action="/account" method="POST">
+	<input type="submit" value="Delete?">
+</form>
+
+<form action="/logout" method="POST">
+	<input type="submit" value="Zap Out">
+</form> 
 
 <div class="account">
 	<h3>
@@ -43,8 +97,7 @@
 		<br>
 	</form>
 
-
 	<form action="/account" method="POST">
 		<input type="submit" value="Delete?" class="delAcc">
 	</form>
-</div>
+</div> 
