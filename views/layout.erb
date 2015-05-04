@@ -40,7 +40,9 @@
 					<h1>
 						<%= "#{current_user.username}'s Profile" %>
 					</h1>
-				</div>					
+				</div>
+			<% else %>
+					<%= yield %>				
 			<% end %>
 
 			<div class="weird">
