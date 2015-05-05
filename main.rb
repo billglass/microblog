@@ -36,6 +36,7 @@ end
 
 get '/members' do
 	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
+	@title = "Members"
 	@users = User.all
 	@nav = navigation
 	erb :members

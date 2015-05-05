@@ -41,8 +41,36 @@
 						<%= "#{current_user.username}'s Profile" %>
 					</h1>
 				</div>
+			<% elsif @title == "Members" %>
+				<div class="mainHead">
+					<h1>
+						<%= "List of Members" %>
+					</h1>
+				</div>
 			<% else %>
-					<%= yield %>				
+					<div class="head">	
+						<h1>
+							<%= @title %>
+						</h1>
+					</div>
+
+					<div class="navBar">
+						<nav>
+							<ul>
+							<% @nav.each do |key, value| %>
+								<li>
+									<a href=<%= value %>>
+										<%= key %>
+									</a>
+								</li>
+								<% end %>
+							</ul>
+							
+							<form action="/logout" method="POST">
+								<input type="submit" value="ZAP OUT" class="logout">
+							</form>
+						</nav>
+					</div>				
 			<% end %>
 
 			<div class="weird">
@@ -71,7 +99,77 @@
 			</div>
 
 		<% else %>
-			<%= yield %>
+			<div class="head">	
+				<h1>
+					<%= @title %>
+				</h1>
+			</div>
+
+		  <% if flash[:notice] %>
+		    <div class="flash notice">
+		      <%=flash[:notice] %>
+		    </div>
+		  <% end %>
+		  <% if flash[:alert] %>
+		    <div class="flash alert">
+		      <%=flash[:alert] %>
+		    </div>
+		  <% end %>
+
+			<!-- <img src="/images/batman.png" class="bats"> -->
+
+			<div class="homeForms">
+				<div class="login">
+					<div class="zapHead">
+						<h2>
+							Zap In!
+						</h2>
+					</div>
+
+					<div class="inFull">
+						<form action="/login" method="POST">
+							<div class="logForm">
+								<input type="text" name="username" placeholder="Alias" required>
+								<br>
+								<input type="password" name="password" placeholder="Password" required>
+							</div>		
+							
+							<div class="logSubmit">
+								<input type="submit" value="ZAP!" class="submit">
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="signUp">
+					<div class="zapHead">
+						<h2>
+							Zap Up!
+						</h2>
+					</div>
+
+					<div class="upFull">
+						<form action="/sign_up" method="POST">
+							<div class="signForm">
+								<input type="text" name="[user]username" placeholder="Pick Your Alias" required>
+
+								<br>
+
+								<input type="email" name="[user]email" placeholder="Enter Your Email" required>
+
+								<br>
+
+								<input type="password" name="[user]password" placeholder="Pick Your Password" required>
+							
+							</div>
+
+							<div class="signSubmit">
+								<input type="submit" value="ZAP!" class="submit">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		<% end %>
 		
 		<% if current_user %>
