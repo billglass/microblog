@@ -69,6 +69,7 @@ body {
 	font-size: 2em;
 	background-color: #FFFFFF;
 	color: #DB0001;
+	cursor: pointer;
 }
 
 
@@ -188,13 +189,14 @@ footer {
 	padding: 2px;
 	max-width: 468px;
 	width: 468px;
-	margin: 0 auto;
+	margin: 15px auto;
 	border: 2px solid black;
 	height: 288px;
 	background-color: #FFFFFF;
 	text-align: center;
 	z-index: -10;
 	box-shadow: 0px 8px 28px 0px;
+	/*float: left;*/
 }
 
 .login {
@@ -294,46 +296,23 @@ input.submit {
 	width: 226px;
 	margin: 2px auto;	
 }
+
+.bats {
+	float: left;
+	width: 180px;
+	margin: 0 273px;
+}
+
+.doom {
+	float: left;
+	width: 310px;
+	margin: 0 186px;
+}
 /* Home - Sign-in & Sign-up forms >>>> Start */
 
 /* Account >>>>>>>>>>>>>>>>>>>>>>>>>>> Start */
-.labelStats {
-	width: 960px;
-	height: 328px;
-	background-color: #FFFFFF;
-	margin: 10px auto;
-	font-size: 22px;
-	border: 2px solid black;
-	box-shadow: 0px 8px 28px 0px;
-}
-
-.labels {
-	float: left;
-	margin: 7px 168px;
-	text-align: center;
-}
-
-.indLabel {
-	border: 2px solid black;
-	padding: 8px;
-	margin: 0px 2px 2px 2px;
-	width: 239px;
-}
-
-.indStat {
-	border: 2px solid black;
-	padding: 8px;
-	margin: 0 7px 2px 0;
-}
-
-.stats {
-	float: left;
-	margin-top: 7px;
-}
-
 .account {
-	clear: both;
-	width: 960px;
+	width: 962px;
 	text-align: center;
 	border: 2px solid black;
 	margin: 0 auto;
@@ -437,6 +416,36 @@ input.submit {
 	font-size: 3em;
 	padding: 2px;
 	color: #EDEF34;
+}
+
+.posts {
+	width: 1012px;
+	margin: 0 auto;
+}
+
+.singleThought {
+	background-image: url('/images/speech2.png');
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	background-position: center;
+	background-size: 500px 200px;
+	text-align: center;
+	float: left;
+}
+
+.thought {
+	padding: 58px 132px;
+	padding: 25px 40px 0px 53px;
+	font-size: 20px;
+	width: 392px;
+	height: 65px;
+}
+
+p.thoughtID {
+	margin: 0;
+	color: #DB0001;
 }
 /* Feed >>>>>>>>>>>>>>>>>>>>>>>>> End */
 

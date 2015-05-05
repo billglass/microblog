@@ -67,10 +67,7 @@ post '/sign_up' do
 end
 
 get '/account' do
-	if session[:user_id] == nil
-		redirect to '/login'
-	end
-	@user = User.find_by(session[:user_id])
+	@user = User.all
 	@title = navigation.keys[1]
 	@nav = navigation
 	erb :account
@@ -94,7 +91,7 @@ end
 
 post '/feed' do
 	@post = Post.new(post: params[:post][:post])
-	# @post = Post.new(params[:post])   #, user_id: current_user.id)
+	# @post = Post.new(params[:post]), user_id: current_user.id)
 	@post.user = current_user
 	@post.save
 	puts "#{params.inspect}"
@@ -113,5 +110,11 @@ end
 
 post '/logout' do
 	session[:user_id] = nil
+	redirect to ('/')
+end
+
+post '/delete' do
+	current_user.destroy
+	session.clear
 	redirect to ('/')
 end
