@@ -2,12 +2,11 @@
 
 <ol>
 <% @users.each do |user| %>
-<% if current_user.following %>
-	<%= user.username %> | <a href="<%= "/follow/#{user.id}" %>">follow</a>
-		<% flash[:notice] = "Currently following" %>
-			<% else %>
-			<a href="<%= "/unfollow/#{user.id}" %>">Unfollow</a>
-	<% end %>
+<% if @relationship != true %>
+	<%= user.username %> | <a href="<%= "/follow/#{user.id}" %>">Follow</a>
+    <% else %>
+      <%= user.username %> | <a href="<%= "/unfollow/#{user.id}" %>">Unfollow</a>
+  <% end %>
 <% end %>
 
 </ol>
@@ -17,7 +16,7 @@
     <%=flash[:notice] %>
   </div>
 
-<% elsif flash[:alert] %>
+<% else flash[:alert] %>
   <div class="flash alert">
     <%=flash[:alert] %>
   </div>

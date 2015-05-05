@@ -6,6 +6,16 @@ class User < ActiveRecord::Base
 	has_many :following, through: :active_relationships, source: :followed
 	has_many :followers, through: :passive_relationships, source: :follower
 
+# def follow
+# 	@following.create(follower_id: followed_id)
+# 	insert into relationship table
+
+# end
+
+# def unfollow
+# 	@following.find_by(follower_id: followed_id).destroy
+# 	destroy!
+
 end
 
 class Post < ActiveRecord::Base
@@ -17,6 +27,6 @@ class Relationship < ActiveRecord::Base
 	belongs_to :followed, class_name: "User"
 	#maps to User table
 	validates_uniqueness_of :follower_id, scope: :followed_id
-	
-	#there should be no repeated pairs inside of this table
 end
+
+	#there should be no repeated pairs inside of this table
