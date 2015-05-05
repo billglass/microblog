@@ -24,11 +24,18 @@ get '/follow/:id' do
 	redirect to('/members')
 end
 
+get '/unfollow/:id' do
+	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
+	@relationship = nil
+	redirect to('/members')
+end
+
 #still can follow yourself, fix that
 #show unfollow links
 #can't follow people you already follow - no duplicates
 
 get '/members' do
+	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
 	@title = "Members"
 	@users = User.all
 	@nav = navigation
