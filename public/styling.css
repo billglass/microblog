@@ -32,12 +32,12 @@ body {
 	z-index: -1;
 	background-image: url("/images/speech2.png");
 	background-repeat: no-repeat;
-	background-size: 180px 265px;
+	background-size: 180px 300px;
 	background-position: center;
 	padding: 28px;
 	margin: 0 auto;
 	width: 120px;
-	height: 209px;
+	height: 265px;
 }
 
 .navBar nav {
@@ -376,7 +376,7 @@ input.submit {
 /* Feed >>>>>>>>>>>>>>>>>>>>>>> Start */
 
 .feedForm {
-	width: 960px;
+	width: 962px;
 	margin: 10px auto;
 	border: 2px solid black;
 	background-color: #FFFFFF;
