@@ -29,6 +29,7 @@ end
 #can't follow people you already follow - no duplicates
 
 get '/members' do
+	@title = "Members"
 	@users = User.all
 	@nav = navigation
 	erb :members
