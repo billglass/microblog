@@ -67,10 +67,7 @@ post '/sign_up' do
 end
 
 get '/account' do
-	if session[:user_id] == nil
-		redirect to '/login'
-	end
-	@user = User.find_by(session[:user_id])
+	@user = User.all
 	@title = navigation.keys[1]
 	@nav = navigation
 	erb :account
