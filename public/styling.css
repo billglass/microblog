@@ -24,7 +24,7 @@ body {
 .weird {
 	width: 1340px;
 	margin: 0 auto 210px auto;
-	height: 410px;
+	height: 1000px;
 }
 
 .navBar {
@@ -297,7 +297,42 @@ input.submit {
 /* Home - Sign-in & Sign-up forms >>>> Start */
 
 /* Account >>>>>>>>>>>>>>>>>>>>>>>>>>> Start */
+.labelStats {
+	width: 960px;
+	height: 328px;
+	background-color: #FFFFFF;
+	margin: 10px auto;
+	font-size: 22px;
+	border: 2px solid black;
+	box-shadow: 0px 8px 28px 0px;
+}
+
+.labels {
+	float: left;
+	margin: 7px 168px;
+	text-align: center;
+}
+
+.indLabel {
+	border: 2px solid black;
+	padding: 8px;
+	margin: 0px 2px 2px 2px;
+	width: 239px;
+}
+
+.indStat {
+	border: 2px solid black;
+	padding: 8px;
+	margin: 0 7px 2px 0;
+}
+
+.stats {
+	float: left;
+	margin-top: 7px;
+}
+
 .account {
+	clear: both;
 	width: 960px;
 	text-align: center;
 	border: 2px solid black;

@@ -1,4 +1,4 @@
-<h1>
+<!-- <h1>
 	<%= "Welcome #{current_user.username}" %>
 </h1>
 
@@ -16,44 +16,57 @@
 	<input type="text" name="[user]website" placeholder="Website"><br>
 	<input type="text" name="[user]superhero" placeholder="Favorite Superhero or Villain"><br>
 	<input type="submit" value="Submit"><br>
-</form>
+</form> -->
 
-<% @user.each do |t| %>
-	<p>
-	 		<%= t.fname %>
-			<%= t.lname %>
+<div class="labelStats">
+	<div class="labels">
+		<p class="indLabel">
+			Name:
 		</p>
-		<p>			
-			<%= t.phone %>
+
+		<p class="indLabel">
+			Phone:
 		</p>
-		<p>
-			<%= t.city %>
+
+		<p class="indLabel">
+			City:
 		</p>
-		<p>
-			<%= t.gender %>
+
+		<p class="indLabel">
+			Gender:
 		</p>
-		<p>
-			<%= t.birthday %>
+
+		<p class="indLabel">
+			Birthday:
 		</p>
-		<p>
-			<%= t.website %>
+
+		<p class="indLabel">
+			Website:
 		</p>
-		<p>
-			<%= t.superhero %> 
-		</p> 
+
+		<p class="indLabel">
+			Favorite Superhero or Villain:
+		</p>
+	</div>
+
+	<div class="stats">
+			
+			<p class="indStat">
+			<%= @user.username %>
+			</p>
+		
+	</div>
+</div>
 
 
-	<% end %> 
-
-
-<form action="/account" method="POST">
+<!-- <form action="/account" method="POST">
 	<input type="submit" value="Delete?">
 </form>
 
 <form action="/logout" method="POST">
 	<input type="submit" value="Zap Out">
 </form> 
-
+ -->
 <div class="account">
 	<h3>
 		Account Details
