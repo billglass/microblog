@@ -112,7 +112,7 @@ end
 
 post '/feed' do
 	@post = Post.new(post: params[:post][:post])
-	# @post = Post.new(params[:post])   #, user_id: current_user.id)
+	# @post = Post.new(params[:post]), user_id: current_user.id)
 	@post.user = current_user
 	@post.save
 	puts "#{params.inspect}"
