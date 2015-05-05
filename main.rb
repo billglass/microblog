@@ -76,7 +76,6 @@ end
 
 post '/account' do
 	@user = User.update(current_user, params[:user])
-	@user = User.update(current_user, params[:user.phone])
 	@user.save
 	puts "#{params.inspect}"
 	redirect to ('/account')
