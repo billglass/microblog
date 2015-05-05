@@ -49,7 +49,6 @@ post '/login' do
 	@user = User.find_by(username: params[:username])
 		if @user and @user.password == params[:password]
 			session[:user_id] = @user.id
-			flash[:notice] = "Welcome Back #{current_user.username}"
 			redirect to ('/feed')
 			puts "#{params.inspect}"
 		else 
@@ -68,7 +67,10 @@ post '/sign_up' do
 end
 
 get '/account' do
-	@user = User.all
+	if session[:user_id] == nil
+		redirect to '/login'
+	end
+	@user = User.find_by(session[:user_id])
 	@title = navigation.keys[1]
 	@nav = navigation
 	erb :account
