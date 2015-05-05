@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501012342) do
+ActiveRecord::Schema.define(version: 20150505161530) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150501012342) do
     t.string  "gender"
     t.string  "superhero"
     t.string  "website"
+    t.string  "pnumber"
   end
 
 end

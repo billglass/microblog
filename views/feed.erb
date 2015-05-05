@@ -11,10 +11,13 @@
 </div>
 
 
- <% if !current_user %>
+ <% if current_user %>
 	<% current_user.posts.each do |tweet| %>
+			<!-- create div styled like thought bubble, for reach one it will create one.> -->
 			<p>
 				<%= tweet.post %>
 			</p>
 	<% end %> 
 <% end %>
+
+
