@@ -12,7 +12,28 @@ def current_user
 	session[:user_id] ? User.find(session[:user_id]) : nil
 end	
 
-navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile"}
+navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile", "Members" => "/members"}
+
+get '/follow/:id' do
+	@relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
+	if @relationship.save
+		flash[:notice] = "Successfully Followed"
+	else
+		flash[:alert] = "Error"
+	end
+	redirect to('/members')
+end
+
+#still can follow yourself, fix that
+#show unfollow links
+#can't follow people you already follow - no duplicates
+
+get '/members' do
+	@users = User.all
+	@nav = navigation
+	erb :members
+end	
+
 
 #mapping a PATTERN, not an exact URL
 #: = key
