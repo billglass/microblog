@@ -98,7 +98,7 @@ post '/feed' do
 	redirect to ('/feed')
 end
 
-get '/profile/:username' do
+get '/profile' do
 	@user = User.find_by(username: params[:username])
 	@title = navigation.keys[2]
 	@nav = navigation
