@@ -14,34 +14,9 @@ end
 
 navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile", "Members" => "/members"}
 
-get '/follow/:id' do
-	@relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
-	if @relationship.save
-		flash[:notice] = "Successfully Followed"
-	else
-		flash[:alert] = "Error"
-	end
-	redirect to('/members')
-end
-
-get '/unfollow/:id' do
-	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id]).destroy
-	# @relationship = nil
-	redirect to('/members')
-end
-
 #still can follow yourself, fix that
 #show unfollow links
 #can't follow people you already follow - no duplicates
-
-get '/members' do
-	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
-	@title = "Members"
-	@users = User.all
-	@nav = navigation
-	erb :members
-end	
-
 
 #mapping a PATTERN, not an exact URL
 #: = key
@@ -56,11 +31,6 @@ end
 # 	puts params.inspect
 # end
 
-# #gets every user
-# get '/users' do
-# 	@users = User.all
-# 	erb :index
-# end
 
 # #gets specific profile page
 # get '/users/:id' do
@@ -76,14 +46,14 @@ end
 
 post '/login' do
 	@user = User.find_by(username: params[:username])
-		if @user and @user.password == params[:password]
-			session[:user_id] = @user.id
-			redirect to ('/feed')
-			puts "#{params.inspect}"
-		else 
-			flash[:alert] = "Incorrect username/password"
-			redirect to ('/')
-		end
+	if @user and @user.password == params[:password]
+		session[:user_id] = @user.id
+		redirect to ('/feed')
+		puts "#{params.inspect}"
+	else 
+		flash[:alert] = "Incorrect username/password"
+		redirect to ('/')
+	end
 end
 
 
@@ -128,6 +98,7 @@ post '/feed' do
 end
 
 get '/profile' do
+	@user = User.find_by(username: params[:username])
 	@title = navigation.keys[2]
 	@nav = navigation
 	erb :profile
@@ -135,6 +106,35 @@ end
 
 post '/profile' do
 	#something
+end
+
+get '/members' do
+	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
+	@title = "Members"
+	@users = User.all
+	@nav = navigation
+	erb :members
+end	
+
+get '/users/:id' do
+	@user = User.find(params[:id])
+	erb :profile6
+end
+
+get '/follow/:id' do
+	@relationship = Relationship.new(follower_id: current_user.id, followed_id: params[:id])
+	if @relationship.save
+		flash[:notice] = "Successfully Followed"
+	else
+		flash[:alert] = "Error"
+	end
+	redirect to('/members')
+end
+
+get '/unfollow/:id' do
+	@relationship = Relationship.find(params[:id])
+	@relationship = nil
+	redirect to('/members')
 end
 
 post '/logout' do

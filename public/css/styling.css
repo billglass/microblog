@@ -24,7 +24,7 @@ body {
 .weird {
 	width: 1340px;
 	margin: 0 auto 210px auto;
-	height: 1000px;
+	height: auto;
 }
 
 .navBar {
@@ -116,7 +116,7 @@ body {
 }
 /* Layout - Banner across pages >>>>>>>> End */
 
-/* Layout - Banner across pages >>>>>>>> End */
+/* Layout - Footer >>>>>>>>>>>>>>>>>>> Start */
 footer {
 	position: fixed;
 	background: #000000;
@@ -157,6 +157,7 @@ footer {
   font-size: 1em;
   background-color: #000000;
   color: #EDEF34;
+  cursor: pointer;
 }
 
 .icon {
@@ -173,7 +174,7 @@ footer {
 	height:auto;
 
 }*/
-/* Layout - Banner across pages >>>>>>>> End */
+/* Layout - Footer >>>>>>>>>>>>>>>>>>>>> End */
 
 /* Home - Sign-in & Sign-up forms >>>> Start */
 
@@ -201,7 +202,7 @@ footer {
 
 .login {
 	float: left;
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
 	padding: 2px; 
 }
 
@@ -258,6 +259,7 @@ input.submit {
 	margin: 0;
 	border: 0;
 	color: #EDEF34;
+	cursor: pointer;
 }
 
 .signUp {
@@ -285,7 +287,7 @@ input.submit {
 
 .signForm {
 	border: 2px solid black;
-	background: #FFFFFF;
+	background-color: #FFFFFF;
 	margin: 2px auto;	
 	height: 140px;
 }
@@ -358,6 +360,7 @@ input.submit {
 	margin: 0 2px 36px 2px;
 	padding: 6px 397px;
 	background-color: #DB0001;
+	cursor: pointer;
 }
 
 .delAcc {
@@ -367,6 +370,7 @@ input.submit {
 	background-color: #FFFFFF;
 	color: #DB0001;
 	box-shadow: 0px 8px 28px 0px #000000;
+	cursor: pointer;
 }
 
 /* Account >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> End*/
@@ -416,11 +420,13 @@ input.submit {
 	font-size: 3em;
 	padding: 2px;
 	color: #EDEF34;
+	cursor: pointer;
 }
 
 .posts {
 	width: 1012px;
 	margin: 0 auto;
+	height: 1000px;
 }
 
 .singleThought {
@@ -436,7 +442,7 @@ input.submit {
 }
 
 .thought {
-	padding: 58px 132px;
+	/*padding: 58px 132px;*/
 	padding: 25px 40px 0px 53px;
 	font-size: 20px;
 	width: 392px;
@@ -452,7 +458,59 @@ p.thoughtID {
 
 
 /* Profile >>>>>>>>>>>>>>>>>>>> Start */
+.profileInfo {
+	width: 580px;
+	height: 154px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	border: 2px solid black;
+	box-shadow: 0px 8px 28px 0px #000000;
+}
 
+.profileLeft {
+	float: left;
+	margin: 2px;
+}
+
+.profileRight {
+	float: left;
+	margin: 2px 2px 2px 0;
+}
+
+.profileInfo ul {
+	width: 287px;
+	list-style-type: none;
+	/*border: 2px solid black;*/
+	margin: 0 auto;
+	padding: 0;
+	font-size: 26px;
+}
+
+.profileInfo ul li {
+	border: 2px solid	black;
+	margin: 0 0 2px 0;
+	padding: 2px;
+}
 
 
 /* Profile >>>>>>>>>>>>>>>>>>>>>> End */
+
+
+/* Members >>>>>>>>>>>>>>>>>>>> Start */
+.memList {
+	background-color: #FFFFFF;
+	width: 700px;
+	margin: 0 auto;
+	padding: 2px;
+	list-style-type: none;
+	text-align: center;
+	border: 2px solid black;
+	font-size: 28px;
+	box-shadow: 0px 8px 28px 0px #000000;
+}
+
+.memList li {
+	border: 2px solid black;
+	padding: 3px;
+	margin:	2px;
+}
