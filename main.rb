@@ -14,7 +14,6 @@ end
 
 navigation = {"Feed" => "/feed", "Account" => "/account", "Profile" => "/profile", "Members" => "/members"}
 
-
 #still can follow yourself, fix that
 #show unfollow links
 #can't follow people you already follow - no duplicates
