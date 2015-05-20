@@ -1,21 +1,23 @@
-<h1>Users</h1>
-
-<ol>
-<% @users.each do |user| %>
-<% if @relationship != true %>
-	<%= user.username %> | <a href="<%= "/follow/#{user.id}" %>">Follow</a>
+<ol class="memList">
+  <% @users.each do |user| %>
+    <% if @relationship != true %>
+    	<li>
+        <%= user.username %>
+        | 
+        <a href="<%= "/follow/:user.id" %>">
+          Follow
+        </a>
+      </li>
     <% else %>
-      <%= user.username %> | <a href="<%= "/unfollow/#{user.id}" %>">Unfollow</a>
+      <%= user.username %> | <a href="<%= "/unfollow/:user.id" %>">Unfollow</a>
+    <% end %>
   <% end %>
-<% end %>
-
 </ol>
 
 <% if flash[:notice] %>
   <div class="flash notice">
     <%=flash[:notice] %>
   </div>
-
 <% else flash[:alert] %>
   <div class="flash alert">
     <%=flash[:alert] %>
