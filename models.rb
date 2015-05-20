@@ -19,6 +19,7 @@ end
 
 class Post < ActiveRecord::Base
   belongs_to :user
+  validates :body, presence: true, length: {maximum: 150}
 end
 
 class Relationship < ActiveRecord::Base
@@ -26,6 +27,7 @@ class Relationship < ActiveRecord::Base
 	belongs_to :followed, class_name: "User"
 	#maps to User table
 	validates_uniqueness_of :follower_id, scope: :followed_id
+
 	#there should be no repeated pairs inside of this table
 end
 
