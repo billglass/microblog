@@ -3,9 +3,9 @@
 <ol>
 <% @users.each do |user| %>
 <% if @relationship != true %>
-	<%= user.username %> | <a href="<%= "/follow/#{user.id}" %>">Follow</a>
+	<%= user.username %> <a href="<%= "/follow/#{user.id}" %>">Follow</a>
     <% else %>
-      <%= user.username %> | <a href="<%= "/unfollow/#{user.id}" %>">Unfollow</a>
+      <%= user.username %> <a href="<%= "/unfollow/#{user.id}" %>">Unfollow</a>
   <% end %>
 <% end %>
 

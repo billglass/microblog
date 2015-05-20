@@ -25,8 +25,8 @@ get '/follow/:id' do
 end
 
 get '/unfollow/:id' do
-	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id])
-	@relationship = nil
+	@relationship = Relationship.find_by(follower_id: current_user.id, followed_id: params[:id]).destroy
+	# @relationship = nil
 	redirect to('/members')
 end
 
