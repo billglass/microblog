@@ -85,7 +85,8 @@ end
 get '/feed' do
 	@title = navigation.keys[0]
 	@nav = navigation
-	# @post = Post.find_by(post: params[:post])
+	@posts = Post.all
+	# @post = Post.find(post: params[:post])
 	erb :feed
 end
 
@@ -119,7 +120,7 @@ end
 
 get '/users/:id' do
 	@user = User.find(params[:id])
-	erb :profile6
+	erb :profile
 end
 
 get '/follow/:id' do
