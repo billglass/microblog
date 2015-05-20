@@ -113,7 +113,7 @@ body {
 
 footer {
 	position: fixed;
-	background-color: tint($quartinaryColor, 50%);
+	background-color: $quartinaryColor;
 	right: 0;
 	bottom: 0;
 	left: 0;

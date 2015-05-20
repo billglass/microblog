@@ -22,26 +22,20 @@
 	<div class="profileRight">
 		<ul>
 			<li>
-				<%= @user.username %>
+				<%= current_user.fname %>
 			</li>
 			
-			<% if @user.city != nil %>
 				<li>
-				 <%= @user.city %>
+				 <%= current_user.city %>
 				</li>
-			<% end %>
 
-			<% if @user.gender != nil %>
 				<li>
-					<%= @user.gender %>
+					<%= current_user.gender %>
 				</li>
-			<% end %>
 
-			<% if @user.superhero != nil %>
 				<li>
-					<%= @user.superhero %>
+					<%= current_user.superhero %>
 				</li>
-			<% end %>
 		</ul>
 	</div>
 </div>
