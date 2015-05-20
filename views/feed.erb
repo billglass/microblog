@@ -9,17 +9,19 @@
 		</div>
 	</form>
 </div>
+
 <% if current_user %>
 	<div class="posts">
+		<!-- create div styled like thought bubble, for each one it will create one -->
 		<% current_user.posts.reverse_each do |tweet| %>
-			<!-- create div styled like thought bubble, for reach one it will create one.> -->
 			<div class="singleThought">
 				<p class="thought">
 					<%= tweet.post %>
 				</p>
-<!-- can't get the tweets to number based on user alone; they're numbering based on all of the tweets -->
+
 				<p class="thoughtId">
-					<%= "Zap ##{tweet.id}" %>
+					<%= tweet.created_at.to_s %>
+					<%= tweet.user.username %>
 				</p>
 			</div>
 		<% end %> 

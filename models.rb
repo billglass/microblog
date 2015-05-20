@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 # def follow
 # 	@following.create(follower_id: followed_id)
 # 	insert into relationship table
-
 # end
 
 # def unfollow
@@ -27,6 +26,6 @@ class Relationship < ActiveRecord::Base
 	belongs_to :followed, class_name: "User"
 	#maps to User table
 	validates_uniqueness_of :follower_id, scope: :followed_id
+	#there should be no repeated pairs inside of this table
 end
 
-	#there should be no repeated pairs inside of this table
